@@ -47,12 +47,59 @@ body {
 *:after {
   box-sizing: border-box;
 }
-.intro {
-  background: #0000;
-}
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+.header {
+  padding: 1.2rem 0;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user {
+  display: flex;
+}
+.user__img {
+  width: 57px;
+  height: 57px;
+}
+img {
+  border-radius: 50%;
+}
+.user__content {
+  padding-left: 9px;
+}
+.user__name {
+  font-size: 1.06rem;
+  color: #2b2a2c;
+  line-height: 1.2rem;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+.user__prof {
+  font-size: 0.8rem;
+  color: rgba(43, 42, 44, 0.7);
+}
+.nav {
+  display: flex;
+  height: 100%;
+}
+.nav__link {
+  font-size: 0.93rem;
+  color: #2b2a2c;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 0.66rem 2rem;
+  transition: border 0.2s linear;
+}
+:hover {
+  border-color: #2b2a2c;
 }
