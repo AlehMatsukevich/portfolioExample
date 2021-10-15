@@ -2,20 +2,59 @@
 .nav{
     display:flex;
     height: 100%;
+    align-items: center;
     
 
 }
 .nav__link{
+    position: relative;
+    margin-left: 2rem;
     font-size: .93rem;
     color: @black;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid transparent;
+    
     border-radius: 20px;
-    padding: .66rem 2rem;
-    transition: border .2s linear;
+   
+    transition: border .1s linear;
+
+    &--btn {
+        border: 2px solid transparent;
+        padding: .66rem 2rem;
+        border-radius: 20px;
+   }
+   &:after{
+    content: "";
+    width:0;
+    height: 2px;
+    background: @black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+
+    transition: width .2s linear;
 }
-&:hover{
-    border-color: @black;
+
+
+&:hover:not(.nav__link--btn) {
+    &:after{
+        width: 100%;
+    }
 }
+&--btn {
+     border: 2px solid @black;
+     padding: .66rem 2rem;
+     border-radius: 20px;
+     transition: background .2s linear, color .2s;
+
+     &:hover{
+         background: @black;
+         color: @white;
+
+     }
+     
+}
+}
+

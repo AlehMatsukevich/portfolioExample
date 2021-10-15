@@ -1,5 +1,5 @@
 //compress: false
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300;1,700&display=swap');
 @import 'vars';
 html {
     font-size: 15px;
@@ -10,7 +10,9 @@ body {
     font-size: 1rem;
     color: @black;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 *,
 *:before,
 *:after {
@@ -22,3 +24,6 @@ body {
 @import 'blocks/header';
 @import 'blocks/user';
 @import 'blocks/nav.less';
+@import 'blocks/intro';
+@import 'blocks/social';
+@import 'blocks/btn';
